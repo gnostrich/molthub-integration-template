@@ -4,18 +4,20 @@ A GitHub Actions workflow template for integrating your repository with [Moltboo
 
 ## Repository Structure
 
-This repository has an **ultra-simple structure** with just the essentials at the root:
+This repository has a simple structure with the workflow ready to use:
 
 ```
 ClawPilot/
-├── molthub-template.yml    ← Single workflow template file
-├── README.md               ← This documentation
-└── LICENSE                 ← License file
+├── .github/
+│   └── workflows/
+│       └── molthub-template.yml  ← Ready-to-use workflow
+├── README.md                     ← This documentation
+└── LICENSE                       ← License file
 ```
 
-**⚠️ IMPORTANT**: The workflow file is at the root for easy access and downloading. It is a **template file** meant to be copied. GitHub Actions **only executes workflows** that are placed in the `.github/workflows/` directory of a repository.
+**✅ READY TO USE**: The workflow is already in `.github/workflows/` so you can test it immediately in this repository or copy it to yours.
 
-### **Molthub Template** (`molthub-template.yml`)
+### **Molthub Template** (`.github/workflows/molthub-template.yml`)
 
 This is the complete Molthub integration workflow. It serves dual purposes:
 
@@ -69,30 +71,36 @@ Your workflow continues with next jobs
 
 ## Quick Start
 
-### Option 1: Test the Integration Immediately
+### Option 1: Test in This Repository
 
-1. **Download the template** and place it in your repository:
-   ```bash
-   # Create workflows directory if it doesn't exist
-   mkdir -p .github/workflows
-   
-   # Download and save the template
-   curl -o .github/workflows/molthub-template.yml \
-     https://raw.githubusercontent.com/gnostrich/ClawPilot/main/molthub-template.yml
-   ```
-
-2. **Add your Moltbook API key** as a repository secret:
-   - Go to your repository Settings → Secrets and variables → Actions
+1. **Add your Moltbook API key** as a repository secret:
+   - Go to repository Settings → Secrets and variables → Actions
    - Create a new secret named `MOLTHUB_API_KEY`
    - Paste your Moltbook API key value
 
-3. **Run a test** manually:
+2. **Run a test** manually:
    - Go to Actions tab
    - Select "ClawPilot - Molthub Integration"
    - Click "Run workflow"
    - Watch it post a test message to Moltbook!
 
-### Option 2: Use as a Reusable Workflow
+### Option 2: Copy to Your Repository
+
+1. **Copy the workflow file** to your repository:
+   ```bash
+   # Create workflows directory if it doesn't exist
+   mkdir -p .github/workflows
+   
+   # Download and save the workflow
+   curl -o .github/workflows/molthub-template.yml \
+     https://raw.githubusercontent.com/gnostrich/ClawPilot/main/.github/workflows/molthub-template.yml
+   ```
+
+2. **Add your Moltbook API key** as a repository secret (same as Option 1)
+
+3. **Test or use** the workflow in your repository
+
+### Option 3: Use as a Reusable Workflow
 
 After setting up the template file in `.github/workflows/`, call it from other workflows:
 
@@ -122,11 +130,11 @@ All configuration is documented in the template file comments.
 
 ## Key Features
 
-✅ **Ultra-Simple Structure**: One workflow file does it all  
+✅ **Ready to Use**: Workflow already in correct location for immediate testing  
 ✅ **Dual-Mode Operation**: Use as reusable workflow OR run directly for testing  
 ✅ **Built-in Test**: Manual trigger sends test post to verify integration  
 ✅ **Embedded Documentation**: Complete policy and guidelines included  
-✅ **Easy to Use**: Download one file and you're ready to go  
+✅ **Easy to Copy**: Single file to copy to your repository  
 ✅ **Secure**: Uses GitHub Secrets for API key management  
 
 ## Requirements
@@ -156,9 +164,9 @@ Next steps:
 ## Support
 
 For issues or questions:
-- Review the embedded policy in `molthub-template.yml` (at repository root)
+- Review the embedded policy in `.github/workflows/molthub-template.yml`
 - Check GitHub Actions documentation for workflow usage
-- Verify your `MOLTHUB_API_KEY` secret is set correctly when using the template
+- Verify your `MOLTHUB_API_KEY` secret is set correctly when using the workflow
 
 ## License
 
