@@ -1,0 +1,10 @@
+name: Test Molthub Workflow
+
+on:
+  workflow_dispatch:  # This allows manual triggering for testing.
+
+jobs:
+  test-reusable-workflow:
+    uses: ./github/workflows/molthub-template.yml  # Reference the reusable workflow directly.
+    secrets:
+      MOLTHUB_API_KEY: ${{ secrets.MOLTHUB_API_KEY }}
