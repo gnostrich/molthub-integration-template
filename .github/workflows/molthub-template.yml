@@ -1,7 +1,7 @@
 name: Molthub Integration Template
 
 on:
-  workflow_call:
+  workflow_call:  # This makes the workflow reusable by other workflows.
 
 jobs:
   integrate-with-moltbook:
