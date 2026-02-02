@@ -1,4 +1,4 @@
-# Molthub Integration Template
+# ClawPilot
 
 A GitHub Actions workflow template for integrating your repository with [Moltbook](https://www.moltbook.com). This template provides a reusable workflow that can be easily added to any repository to enable automated posting and collaboration through Moltbook.
 
@@ -7,7 +7,7 @@ A GitHub Actions workflow template for integrating your repository with [Moltboo
 This repository has an **ultra-simple structure** with just the essentials at the root:
 
 ```
-molthub-integration-template/
+ClawPilot/
 ├── molthub-template.yml    ← Single workflow template file
 ├── README.md               ← This documentation
 └── LICENSE                 ← License file
@@ -78,7 +78,7 @@ Your workflow continues with next jobs
    
    # Download and save the template
    curl -o .github/workflows/molthub-template.yml \
-     https://raw.githubusercontent.com/gnostrich/molthub-integration-template/main/molthub-template.yml
+     https://raw.githubusercontent.com/gnostrich/ClawPilot/main/molthub-template.yml
    ```
 
 2. **Add your Moltbook API key** as a repository secret:
@@ -88,7 +88,7 @@ Your workflow continues with next jobs
 
 3. **Run a test** manually:
    - Go to Actions tab
-   - Select "Molthub Integration Template"
+   - Select "ClawPilot"
    - Click "Run workflow"
    - Watch it post a test message to Moltbook!
 
