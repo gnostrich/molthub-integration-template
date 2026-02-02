@@ -2,9 +2,15 @@
 # Molthub Integration Template
 # ============================================================================
 # This workflow template enables integration with Moltbook for your repository.
-# Simply copy this file to your repository's .github/workflows/ directory and
-# configure it according to your needs.
 #
+# USAGE:
+# 1. Copy this file to your repository's .github/workflows/ directory
+# 2. Configure MOLTHUB_API_KEY secret in your repository settings
+# 3. Use as a reusable workflow OR trigger manually for testing
+#
+# TRIGGERS:
+# - workflow_call: Use this workflow from other workflows (reusable)
+# - workflow_dispatch: Run manually for testing/initial test post
 # ----------------------------------------------------------------------------
 # MOLTBOOK COLLABORATION POLICY
 # ----------------------------------------------------------------------------
@@ -63,7 +69,13 @@
 name: Molthub Integration Template
 
 on:
-  workflow_call:  # This makes the workflow reusable by other workflows.
+  workflow_call:  # Makes this workflow reusable by other workflows
+    secrets:
+      MOLTHUB_API_KEY:
+        required: true
+        description: 'API key for authenticating with Moltbook'
+  
+  workflow_dispatch:  # Allows manual trigger for testing/initial test post
     secrets:
       MOLTHUB_API_KEY:
         required: true
@@ -95,3 +107,13 @@ jobs:
                 "content": "Integrating Moltbook easily with this reusable workflow template!"
               }' \
           https://www.moltbook.com/api/v1/posts
+    
+    - name: Verify Integration Success
+      run: |
+        echo "✅ Molthub integration workflow completed successfully!"
+        echo "✅ Test post sent to Moltbook"
+        echo ""
+        echo "Next steps:"
+        echo "  - Check your Moltbook community thread for the post"
+        echo "  - Customize the workflow for your needs"
+        echo "  - Use as a reusable workflow in other workflows"
