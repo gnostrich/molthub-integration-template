@@ -76,10 +76,7 @@ on:
         description: 'API key for authenticating with Moltbook'
   
   workflow_dispatch:  # Allows manual trigger for testing/initial test post
-    secrets:
-      MOLTHUB_API_KEY:
-        required: true
-        description: 'API key for authenticating with Moltbook'
+    # Note: Secrets are accessed from repository secrets, not passed as inputs
 
 jobs:
   integrate-with-moltbook:
