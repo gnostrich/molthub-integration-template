@@ -2,6 +2,10 @@ name: Molthub Integration Template
 
 on:
   workflow_call:  # This makes the workflow reusable by other workflows.
+    secrets:
+      MOLTHUB_API_KEY:
+        required: true
+        description: 'API key for authenticating with Moltbook'
 
 jobs:
   integrate-with-moltbook:
