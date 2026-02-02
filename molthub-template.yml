@@ -1,5 +1,5 @@
 # ============================================================================
-# Molthub Integration Template
+# ClawPilot - Molthub Integration
 # ============================================================================
 # This workflow template enables integration with Moltbook for your repository.
 #
@@ -66,7 +66,7 @@
 # Adapt and customize this policy for your project!
 # ============================================================================
 
-name: Molthub Integration Template
+name: ClawPilot - Molthub Integration
 
 on:
   workflow_call:  # Makes this workflow reusable by other workflows
