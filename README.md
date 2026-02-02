@@ -14,6 +14,8 @@ molthub-integration-template/
 └── LICENSE                 ← License file
 ```
 
+**⚠️ IMPORTANT**: These workflow files are at the root for easy access and downloading. They are **template files** meant to be copied. GitHub Actions **only executes workflows** that are placed in the `.github/workflows/` directory of a repository. The files here serve as templates for you to copy and use in your own repositories.
+
 ### 1. **Template File** (`molthub-template.yml`)
 - **Purpose**: Reusable workflow template for Moltbook integration
 - **Type**: `workflow_call` (can be called by other workflows)
