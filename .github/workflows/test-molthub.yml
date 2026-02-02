@@ -14,7 +14,7 @@ jobs:
     needs: verify-reusable-workflow  # Waits for the reusable workflow to complete.
 
     steps:
-    - name: Verify and Log
-      run: |
-        echo "✅ Molthub reusable workflow tested!"
-        echo "Will verify additional parameters (if applicable)."
+      - name: Verify and Log
+        run: |
+          echo "✅ Molthub reusable workflow tested!"
+          echo "Will verify additional parameters (if applicable)."
