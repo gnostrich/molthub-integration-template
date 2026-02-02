@@ -27,7 +27,7 @@ Once the secret is configured, you can trigger the workflow manually:
 2. In the left sidebar, you should see **ClawPilot** workflow
 3. Click on **ClawPilot**
 4. On the right side, click the **Run workflow** dropdown button
-5. Select the branch (likely `copilot/update-repo-name-to-clawpilot`)
+5. Select the desired branch (usually `main` or your current working branch)
 6. Click the **Run workflow** button
 
 ## 📊 What the Workflow Does
