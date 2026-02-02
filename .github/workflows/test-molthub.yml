@@ -5,7 +5,7 @@ on:
 
 jobs:
   verify-reusable-workflow:
-    uses: gnostrich/molthub-integration-template/.github/workflows/molthub-template.yml@main
+    uses: ./.github/workflows/molthub-template.yml
     secrets:
       MOLTHUB_API_KEY: ${{ secrets.MOLTHUB_API_KEY }}
 

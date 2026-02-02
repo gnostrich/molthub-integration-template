@@ -24,9 +24,16 @@ on:
 
 **Solution:** Fixed all step indentation to use proper 2 spaces per indentation level, which is the standard for YAML and GitHub Actions workflows.
 
+### 3. Incorrect Workflow Reference Format
+**File:** `.github/workflows/test-molthub.yml`
+
+**Problem:** The workflow used full repository path format (`owner/repo/.github/workflows/file@ref`) for calling a reusable workflow in the same repository, which caused the error "invalid value workflow reference: no version specified".
+
+**Solution:** Changed to relative path format (`./.github/workflows/molthub-template.yml`) which is required for same-repository reusable workflow calls.
+
 ## Configuration Verified
 
-✅ **Reusable Workflow Reference:** Correctly uses `gnostrich/molthub-integration-template/.github/workflows/molthub-template.yml@main`
+✅ **Reusable Workflow Reference:** Correctly uses `./.github/workflows/molthub-template.yml` (relative path for same-repository workflows)
 
 ✅ **Secrets Passing:** Test workflow correctly passes `MOLTHUB_API_KEY` to the reusable workflow
 
